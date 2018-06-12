@@ -14,10 +14,7 @@ import javax.persistence.OneToMany;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author guillermo.islas
- */
+
 @Entity(name="e01_cliente")
 public class Cliente{
     @Id

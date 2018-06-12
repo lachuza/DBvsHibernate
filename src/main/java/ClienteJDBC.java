@@ -11,10 +11,7 @@ import java.sql.SQLException;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author guillermo.islas
- */
+
 public class ClienteJDBC {
 
     /**
@@ -23,8 +20,8 @@ public class ClienteJDBC {
     public static void main(String[] args) {
         // TODO code application logic here
         try {        
-                String url = "jdbc:mysql://localhost:3306/prueba";
-                Connection conn = DriverManager.getConnection(url, "root", "tAndil111");
+                String url = "jdbc:mysql://localhost:3306/bd111mil";
+                Connection conn = DriverManager.getConnection(url, "root", "admin");
                 PreparedStatement st = conn.prepareStatement("SELECT * FROM e01_CLIENTE");
                 ResultSet resultSet = st.executeQuery();
                 while (resultSet.next()) {

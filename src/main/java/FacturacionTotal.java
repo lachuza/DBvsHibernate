@@ -12,10 +12,7 @@ import javax.persistence.Query;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author guillermo.islas
- */
+
 public class FacturacionTotal {
  
     

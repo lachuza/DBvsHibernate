@@ -11,10 +11,7 @@ import javax.persistence.ManyToOne;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author guillermo.islas
- */
+
 @Entity (name="e01_telefono")
 public class Telefono implements Serializable {
     static class Numero implements Serializable {
