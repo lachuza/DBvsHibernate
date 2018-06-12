@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="Cliente" table="e01_cliente">
+    <id column="nro_cliente" name="nro_cliente"/>
+    <property name="nombre"/>
+    <property name="apellido"/>
+    <property name="direccion"/>
+    <property name="activo"/>
+    <bag name="Telefono" table="e01_telefono" inverse="false" fetch="select">
+        <key column="nro_cliente"/>
+        <one-to-many class="Telefono"/> 
+    </bag>
+    <bag name="Factura" table="e01_factura" inverse="false" fetch="select">
+        <key column="nro_cliente"/>
+        <one-to-many class="Factura"/>
+    </bag>
+  </class>
+</hibernate-mapping>

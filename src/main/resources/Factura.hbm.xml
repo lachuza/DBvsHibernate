@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="Factura" table="e01_factura">
+    <id name="nro_factura" column="nro_factura"/>
+    <property name="fecha"/>
+    <property name="total_sin_iva" column="total_sin_iva"/>
+    <property name="iva"/>
+    <property name="total_con_iva" column="total_con_iva"/>
+    <many-to-one name="cliente" class="Cliente" column="nro_cliente"/>
+    <bag name="DetalleFactura" table="e01_detalle_factura" inverse="false" fetch="select">
+        <key column="nro_factura"/>
+        <one-to-many class="DetalleFactura"/> 
+    </bag>
+  </class>
+</hibernate-mapping>
